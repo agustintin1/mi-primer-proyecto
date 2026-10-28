@@ -26,22 +26,29 @@ while True:
         else:
             for indice, una_tarea in enumerate(tareas, 1):
                 print(f"{indice}. {una_tarea}")
+        
+        # Pausa para que puedas leer las tareas tranquilamente
+        input("\nPresiona [Enter] para volver al menú principal...")
                 
     elif opcion == "2":
         nueva = input("Escribe la nueva tarea que quieres agregar: ")
         tareas.append(nueva)
         print(f"✅ ¡Tarea '{nueva}' agregada con éxito!")
         
+        input("\nPresiona [Enter] para volver al menú principal...")
+        
     elif opcion == "3":
         print("\n--- GENERADOR DE CONTRASEÑAS ---")
         caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%"
         longitud = 8
-        # Creamos la contraseña mezclando caracteres al azar
         password_generada = "".join(random.choices(caracteres, k=longitud))
         print(f"🔑 Tu nueva contraseña segura es: {password_generada}")
+        
+        input("\nPresiona [Enter] para volver al menú principal...")
         
     elif opcion == "4":
         print("\n¡Gracias por usar la agenda! ¡Hasta luego, crack!")
         break
     else:
         print("❌ Opción inválida. Elige un número del 1 al 4.")
+        input("\nPresiona [Enter] para continuar...")
